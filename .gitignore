@@ -3,6 +3,7 @@
 !.gitignore
 !.readme.md
 !*.cpp
+!*.c
 !*.ino
 !*.h
 !*.md
