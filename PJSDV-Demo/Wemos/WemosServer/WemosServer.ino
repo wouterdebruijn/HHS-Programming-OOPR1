@@ -126,10 +126,8 @@ void handleConnections() {
         break;
       default:
         client.println("Not Implemented");
+    	client.stop();
         break;
     }
-
-    // Close connection
-    client.stop();
   }
 }
