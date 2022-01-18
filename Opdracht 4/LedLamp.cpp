@@ -6,8 +6,8 @@ bool LedLamp::zetAan(string kleur) {
     bool value = false;
 
     for (int i = 0; i < this->leds.size(); i++) {
-        if (this->leds[i] != nullptr)
-            value |= this->leds[i]->zetAan(kleur);
+        if (this->leds.at(i) != nullptr)
+            value |= this->leds.at(i)->zetAan(kleur);
     }
 
     return value;
@@ -16,15 +16,15 @@ bool LedLamp::zetAan(string kleur) {
 void LedLamp::zetUit() {
     for (int i = 0; i < this->leds.size(); i++) {
         if (this->leds[i] != nullptr)
-            this->leds[i]->zetUit();
+            this->leds.at(i)->zetUit();
     }
 }
 
 string LedLamp::connectie() {
     for (int i = 0; i < this->leds.size(); i++) {
-        if (this->leds[i] != nullptr) {
+        if (this->leds.at(i) != nullptr) {
             // Not relevent for this assignment.
-            cout << this->leds[i]->connectie();
+            cout << this->leds.at(i)->connectie();
             cout << "\n";
         }
     }
