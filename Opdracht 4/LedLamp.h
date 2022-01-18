@@ -4,13 +4,13 @@
 #include <string>
 #include "Led.h"
 
-#include <array>
+#include <vector>
 
 using namespace std;
 
 class LedLamp : public Led {
     private:
-        array<Led*, 8> leds = {nullptr};
+        vector<Led*> leds;
     public:
         LedLamp(string);
         bool zetAan(string);

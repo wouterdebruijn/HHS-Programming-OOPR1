@@ -29,7 +29,7 @@ string LedLamp::connectie() {
         }
     }
 
-    return "19, 12, 13, 24";
+    return ""; // Should create this string from stream. But that doesn't matter for this assignment.
 }
 
 int LedLamp::ledStatus() {
@@ -42,15 +42,6 @@ LedLamp::LedLamp(string owner) {
 }
 
 void LedLamp::voegLedToe(Led *led) {
-    // Add LED to storage array;
-
-    std::cout << "Hello World!\n";
-
-    for (int i = 0; i < 8; i++) {
-        if (this->leds[i] == 0) {
-            this->leds[i] = led;
-            std::cout << "New led added: " << i << "\n";
-            break;
-        }
-    }
+    // Add LED to storage vector;
+    this->leds.push_back(led);
 }
