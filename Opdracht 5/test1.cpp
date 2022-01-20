@@ -40,7 +40,7 @@ TEST(boekengroep, front)
     cout << "Schrijfer: '" << boek.naamSchrijver() << "'\n";
 
 
-    FAIL("Fail me!");
+    // FAIL("Fail me!");
 }
 
 TEST(FirstTestGroup, SecondTest)
@@ -50,6 +50,10 @@ TEST(FirstTestGroup, SecondTest)
 
 TEST(FirstTestGroup, ThirdTest)
 {
+    FrontBoek boek("Wouter", "Logboek");
+
+    FrontBoek newBoek = *boek.maakKopie();
+
     CHECK(true);
 }
 

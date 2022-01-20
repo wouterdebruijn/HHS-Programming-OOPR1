@@ -24,5 +24,8 @@ void FrontBoek::verhoogSchrijver() {
 	schrijver +=1;
 }
 
+FrontBoek* FrontBoek::maakKopie() {
+	return new FrontBoek(*this);
+}
 
 

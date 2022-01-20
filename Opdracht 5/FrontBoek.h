@@ -19,6 +19,7 @@ class FrontBoek {
 	  string naamSchrijver()const;
 	  string naamTitel()const;
 	  void verhoogSchrijver();
+	  FrontBoek *maakKopie();
 	private:
 	  string schrijver;
 	  string titel;
